@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Frame Layout is Used when to add a background image or such-->
+<!--This layout is mostly used to stack views on top of each other-->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/blury_background"
+        android:scaleType="centerCrop" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvAppName"
+            style="@style/h3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:fontFamily="@font/poppins"
+            android:padding="6dp"
+            android:text=" Nile"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintTop_toTopOf="parent"
+            app:drawableStartCompat="@drawable/ic_kleine_shape" />
+
+        <TextView
+            android:id="@+id/LetsLogin"
+            style="@style/h4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:text="@string/letsLogin"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@id/tvAppName"/>
+
+        <TextView
+            android:id="@+id/DontHaveAccount"
+            style="@style/h2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/NoAccount"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@id/LetsLogin"/>
+
+        <TextView
+            android:id="@+id/forgotPassword"
+            style="@style/h2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/NoPassword"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@id/passwordLogin"/>
+
+        <EditText
+            android:id="@+id/emailLogin"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/editTextValue"
+            style="@style/editText"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toBottomOf="@id/DontHaveAccount"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            />
+
+        <EditText
+            android:id="@+id/passwordLogin"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/editTextValue"
+            style="@style/editText"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/emailLogin"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            android:hint="Password"
+            android:inputType="textPassword"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonLogin"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/mediumButtonHeight"
+            style="@style/blueButtonStyle"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@id/forgotPassword"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            android:text="Login"
+            android:fontFamily="@font/poppins"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLoginLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.09" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLoginRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.91" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</FrameLayout>

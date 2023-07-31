@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">E-commerce</string>
+    <string name="rightAddress">The Right Address\nFor Shopping\nAnytime</string>
+    <string name="quality">It is now very easy to reach the\nbest quality products\non the internet!</string>
+    <string name="letsLogin">Let\'s Login</string>
+    <string name="NoAccount">Don\'t have an account? Register.</string>
+    <string name="NoPassword">Forgot Password</string>
 </resources>
